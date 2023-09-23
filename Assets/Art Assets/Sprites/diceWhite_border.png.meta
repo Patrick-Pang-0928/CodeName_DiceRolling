@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9623c71f4649d7f468615c0bbd1d942c
+guid: 32be8517e6fb8a34b973a6b6db156817
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,28 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: diceWhite_border_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 188
-        width: 68
-        height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2906d51f9f6478748845dd775ec8e13a
-      internalID: -954306742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: diceWhite_border_1
+      name: diceWhite_border_3
       rect:
         serializedVersion: 2
         x: 68
@@ -139,7 +118,7 @@ TextureImporter:
         width: 68
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: diceWhite_border_2
+      name: diceWhite_border_5
       rect:
         serializedVersion: 2
         x: 0
@@ -160,7 +139,7 @@ TextureImporter:
         width: 68
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: diceWhite_border_3
+      name: diceWhite_border_2
       rect:
         serializedVersion: 2
         x: 68
@@ -181,7 +160,7 @@ TextureImporter:
         width: 68
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: diceWhite_border_4
+      name: diceWhite_border_1
       rect:
         serializedVersion: 2
         x: 0
@@ -202,7 +181,7 @@ TextureImporter:
         width: 68
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: diceWhite_border_5
+      name: diceWhite_border_4
       rect:
         serializedVersion: 2
         x: 68
@@ -223,7 +202,7 @@ TextureImporter:
         width: 68
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,6 +210,27 @@ TextureImporter:
       bones: []
       spriteID: 31fdaa8c1d3f44841a7f14825e541e13
       internalID: -1611521690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: diceWhite_border_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 188
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00ed525274659442ab930ea3360277e
+      internalID: -954306742
       vertices: []
       indices: 
       edges: []
@@ -246,12 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      diceWhite_border_0: -954306742
-      diceWhite_border_1: 886017413
-      diceWhite_border_2: -319334281
-      diceWhite_border_3: -1357764961
-      diceWhite_border_4: -605529249
-      diceWhite_border_5: -1611521690
+      diceWhite_border_1: -1357764961
+      diceWhite_border_2: -1357764961
+      diceWhite_border_3: 886017413
+      diceWhite_border_4: -1611521690
+      diceWhite_border_5: -319334281
+      diceWhite_border_6: 886017413
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
