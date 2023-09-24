@@ -3,17 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+#region 所有骰面可能性
+public enum DiceSideEnum
+{
+    NumOne = 1,
+    NumTwo = 2,
+    NumThree = 3,
+    NumFour = 4,
+    NumFive = 5,
+    NumSix = 6,
+}
+#endregion
+
 public class DiceController : MonoBehaviour
 {
-    [Header("骰子参数")]
-    public int diceNum = 1;
+    #region 参数设置
+    [Header("基础参数")]
+    public int diceNum = 6;
     public bool isRolling = false;
+
+    //当前骰子的所有骰面
+    [Header("骰面参数")]
+    public int currentSideIndex = 5;
+    public List<DiceSideEnum> currentSideList = new List<DiceSideEnum>() {
+        DiceSideEnum.NumOne,
+        DiceSideEnum.NumTwo,
+        DiceSideEnum.NumThree,
+        DiceSideEnum.NumFour,
+        DiceSideEnum.NumFive,
+        DiceSideEnum.NumSix,
+    };
+    //初始骰面为数字6
+    DiceSideEnum currentDiceSide = DiceSideEnum.NumSix;
+    #endregion
 
     private void Update()
     {
         //按下鼠标左键：掷骰子
-        if (!isRolling && Input.GetMouseButtonUp(0))
-        {
+        if (!isRolling && Input.GetMouseButtonUp(0)) {
             RollDice();
         }
     }
@@ -22,8 +49,7 @@ public class DiceController : MonoBehaviour
     public void RollDice()
     {
         if (isRolling) return;
-        else
-        {
+        else {
             isRolling = true;
             StartCoroutine(RollDice_());
         }
@@ -33,25 +59,37 @@ public class DiceController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         isRolling = false;
-        //每次完成掷骰子后，默认更新骰面一次
-        DiceNumRenew();
+        //结束播放掷骰子动画后，更新一次当前骰子的骰面
+        RenewDiceSideValue();
     }
     #endregion
 
     #region 更新骰面
-    public void DiceNumRenew()
+    public void RenewDiceSideValue()
     {
-        if (!isRolling)
-        {
-            //随机掷出【1，6】中的任一个数字
-            diceNum = Random.Range(1, 7);
+        if (!isRolling) {
+            //随机获取当前骰子的其中一面
+            currentSideIndex = Random.Range(0, currentSideList.Count);
+            currentDiceSide = currentSideList[currentSideIndex];
+            diceNum = GetDiceNum();
         }
     }
     #endregion
 
-    #region 检测骰面
-    public int DiceNumCheck()
+    #region 获取骰面
+    public DiceSideEnum GetDiceSideValue()
     {
+        return currentDiceSide;
+    }
+
+    //若当前骰面为数字1-6，则返回对应的“骰面数值”，否则返回0
+    public int GetDiceNum()
+    {
+        if ((int)GetDiceSideValue() <= 6)
+        {
+            diceNum = (int)GetDiceSideValue();
+        }
+        else diceNum = 0;
         return diceNum;
     }
     #endregion
